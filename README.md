@@ -44,6 +44,8 @@ docker-compose run --rm composer install
 docker-compose run --rm npm run dev
 docker-compose run --rm artisan migrate
 ```
+([see more here](https://github.com/aschmelyun/docker-compose-laravel))
+
 ```
 docker-compose exec php sh
 ```
@@ -51,6 +53,27 @@ or
 ```
 docker exec -it php sh
 ```
+
+### Structure
+
+app
+	http
+		Transformers
+		Controllers ✓
+		Middleware ✓
+		Payloads
+		Requests
+		Util (helpers)
+		ViewComposers
+
+src (business logic)
+	Entities
+	Enumerables (ValueObjects)
+	Repositories
+	Services
+
+Flow:
+Controller -> Service -> Repository
 
 ### Troubleshooting
 
@@ -60,6 +83,17 @@ docker exec -it php sh
 
 https://github.com/docker/compose/issues/4039#issuecomment-276037199
 
+Change database name, you must rebuild in this way. the following command to recreate anonymous volumes:
+```
+docker-compose up -d --build --force-recreate --renew-anon-volumes db
+```
+
+modify php.ini
+```
+docker exec -it php vi /usr/local/etc/php/php.ini-development
+```
+# MYSQL CONTAINER: /run/mysqld/mysqld.sock (esto puede ser el sock)
+# https://stackoverflow.com/questions/4219970/warning-mysql-connect-2002-no-such-file-or-directory-trying-to-connect-vi
 
 ### TODO
 

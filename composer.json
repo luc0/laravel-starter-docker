@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "Laravel Stratosphere",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Laravel Stratosphere starter kit",
     "keywords": [
         "framework",
         "laravel"
@@ -32,7 +32,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Src\\": "src/"
         },
         "classmap": [
             "database/seeds",
