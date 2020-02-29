@@ -4,47 +4,71 @@ With this, Your project will ascend to the stratosphere
 
 | Version | Laravel | PHP | Mysql |
 | ------------- | ------------- | ------------- |  ------------- |
-| 1.0 | 6.2 | 7.2 | 5.7.22 |
+| 1.0 | ^6.2 | 7.2 | 5.7.22 |
 
 Features:
 - Laravel 6
-- Docker (PHP 7.2, Mysql)
+- Docker Containers (based on [this repo](https://github.com/aschmelyun/docker-compose-laravel))
+	- nginx - :8080
+	- mysql - :3306
+	- php - :9000
+	- npm
+	- composer
+	- artisan
 - Structure: 
-  - Services
-  - Repositories
-  - Value Objects
-  - Enums
+	- Services
+	- Repositories
+	- Value Objects
+	- Enums
 
-DockerFile based on:
-https://github.com/aschmelyun/docker-compose-laravel
+### Install
 
-Some composer.json ideas:
-https://github.com/darryldecode/laravel-starter-kit/blob/master/composer.json
+Inside container.
 
-### Help
-1. Enter container
-```
-docker-compose exec php sh
-or
-docker exec -it php sh
-```
-
-2.
+1. Keys
 ```
 php artisan key:generate.
 ```
 
-### Troubleshooting
-
-tirarlos afuera, aunque quizas haga falta hacerlo dentro del container
+2. Permissions
 ```
 sudo chgrp -R www-data storage bootstrap/cache
 sudo chmod -R ug+rwx storage bootstrap/cache
 ```
 
----
+### Docker Usage
+
+Three new containers have been added that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command templates from your project root, modifiying them to fit your particular use case:
+```
+docker-compose run --rm composer install
+docker-compose run --rm npm run dev
+docker-compose run --rm artisan migrate
+```
+```
+docker-compose exec php sh
+```
+or
+```
+docker exec -it php sh
+```
+
+### Troubleshooting
+
+```
 "ERROR: for nginx  Cannot start service nginx: OCI runtime create failed: container_linux.go:345:" ...
+```
 
 https://github.com/docker/compose/issues/4039#issuecomment-276037199
 
+
+### TODO
+
+- Update composer.json
+- Structure
+
+Some composer.json ideas:
+https://github.com/darryldecode/laravel-starter-kit/blob/master/composer.json
+
+---
 ![stratosphere](https://i.ytimg.com/vi/2Z7x4FOSfBk/hqdefault.jpg)
+
