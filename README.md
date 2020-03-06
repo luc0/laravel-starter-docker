@@ -100,8 +100,15 @@ docker exec -it php vi /usr/local/etc/php/php.ini-development
 - Update composer.json
 - Structure
 
-Some composer.json ideas:
-https://github.com/darryldecode/laravel-starter-kit/blob/master/composer.json
+Some ideas:
+Repo w/ search: https://lyften.com/projects/laravel-repository/doc/searching.html
+https://github.com/mtolhuys/laravel-schematics
+composer.json: https://github.com/darryldecode/laravel-starter-kit/blob/master/composer.json
+Diagram your models: https://github.com/mtolhuys/laravel-schematics
+
+Also:
+SPA: https://inertiajs.com/
+
 
 ---
 ![stratosphere](https://i.ytimg.com/vi/2Z7x4FOSfBk/hqdefault.jpg)
