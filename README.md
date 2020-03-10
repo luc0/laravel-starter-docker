@@ -25,15 +25,33 @@ Features:
 
 Inside container.
 
-1. Keys
 ```
-php artisan key:generate.
+// Docker build containers
+docker-compose up -d
+
+// Composer install
+docker-compose run --rm composer install
+
+// Get inside container
+docker exec -it php sh
 ```
 
-2. Permissions
 ```
-sudo chgrp -R www-data storage bootstrap/cache
-sudo chmod -R ug+rwx storage bootstrap/cache
+// Keys
+php artisan key:generate
+```
+
+```
+// Permissions
+chgrp -R www-data storage bootstrap/cache
+chmod -R ug+rwx storage bootstrap/cache
+```
+
+```
+// Update DB credentials in .env with docker-compose.yml
+```
+
+```
 ```
 
 ### Docker Usage
