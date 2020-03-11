@@ -2,9 +2,9 @@
 
 With this, Your project will ascend to the stratosphere
 
-| Version | Laravel | PHP | Mysql |
+| Version | Laravel | PHP | Postgres |
 | ------------- | ------------- | ------------- |  ------------- |
-| 1.0 | ^6.2 | 7.2 | 5.7.22 |
+| 1.0 | ^6.2 | 7.4 | 11.6 |
 
 Features:
 - Laravel 6
