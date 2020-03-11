@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Src\Book;
 Route::get('/', function () {
-    dd(Book::all());
+    $books = Book::all();
+    dd($books);
     return view('welcome');
 });
 
