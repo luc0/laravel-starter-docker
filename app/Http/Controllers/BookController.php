@@ -1,13 +1,23 @@
 <?php
 namespace App\Http\Controllers;
 
-use Src\Book;
+use Src\Services\BookService;
 
 class BookController extends Controller {
 
-	public function index()
+    /**
+     * @var BookService
+     */
+    private $bookService;
+
+    public function __construct(BookService $bookService)
+    {
+        $this->bookService = $bookService;
+    }
+
+    public function index()
 	{
-        $books = Book::all();
+        $books = $this->bookService->getAllBooks();
         dd($books);
 
 		return view('books');

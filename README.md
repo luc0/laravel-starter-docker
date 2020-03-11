@@ -16,10 +16,10 @@ Features:
 	- composer
 	- artisan
 - Structure: 
-	- Services
+    - Entities
+    - Enumerables
 	- Repositories
-	- Value Objects
-	- Enums
+	- Services
 
 ### Install
 
