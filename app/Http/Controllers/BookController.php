@@ -7,6 +7,7 @@ class BookController extends Controller {
 
 	public function index()
 	{
+		dd('a');
         $books = Book::all();
         dd($books);
 
