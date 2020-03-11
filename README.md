@@ -51,7 +51,9 @@ chmod -R ug+rwx storage bootstrap/cache
 // Update DB credentials in .env with docker-compose.yml
 ```
 
+publish repository package
 ```
+php artisan vendor:publish --provider="Torann\LaravelRepository\RepositoryServiceProvider" --tag=config
 ```
 
 ### Docker Usage
@@ -80,7 +82,7 @@ app
 		Controllers ✓
 		Middleware ✓
 		Payloads
-		Requests
+		Requests ✓
 		Util (helpers)
 		ViewComposers
 
@@ -92,6 +94,18 @@ src (business logic)
 
 Flow:
 Controller -> Service -> Repository
+
+### How to
+Request:
+   - used when has validation or some data manipulation.
+
+Transformer:
+   - used for translation & formatting data.
+   
+Repository:
+   - when raw query
+    
+
 
 ### Troubleshooting
 
