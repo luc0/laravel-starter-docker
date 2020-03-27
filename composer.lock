@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5708289b521cacb8d3c13732b187497",
+    "content-hash": "4bc7c2afe2884fedd4882c11df5dfcf6",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2940,17 +2940,22 @@
         },
         {
             "name": "torann/laravel-repository",
-            "version": "0.5.14",
+            "version": "dev-fix-vendor-publish",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Torann/laravel-repository.git",
-                "reference": "61c6812b1fd314e2fda857edc12edd3a7cdfb935"
+                "url": "https://github.com/luc0/laravel-repository.git",
+                "reference": "e0bd5347914f45626dc9563cc4f99c927957b274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Torann/laravel-repository/zipball/61c6812b1fd314e2fda857edc12edd3a7cdfb935",
-                "reference": "61c6812b1fd314e2fda857edc12edd3a7cdfb935",
+                "url": "https://api.github.com/repos/luc0/laravel-repository/zipball/e0bd5347914f45626dc9563cc4f99c927957b274",
+                "reference": "e0bd5347914f45626dc9563cc4f99c927957b274",
                 "shasum": ""
+            },
+            "archive": {
+                "exclude": [
+                    "/tests"
+                ]
             },
             "require": {
                 "illuminate/database": "~5.1|~6.0|~7.0",
@@ -2972,7 +2977,14 @@
                     "Torann\\LaravelRepository\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "files": [
+                    "tests/TestFunctions.php"
+                ],
+                "psr-4": {
+                    "Torann\\LaravelRepository\\Test\\": "tests"
+                }
+            },
             "license": [
                 "BSD-2-Clause"
             ],
@@ -2990,7 +3002,10 @@
                 "repository",
                 "repository pattern"
             ],
-            "time": "2020-03-09T13:46:51+00:00"
+            "support": {
+                "source": "https://github.com/luc0/laravel-repository/tree/fix-vendor-publish"
+            },
+            "time": "2020-03-27T18:49:08+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -5037,7 +5052,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "torann/laravel-repository": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
