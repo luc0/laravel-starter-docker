@@ -39,11 +39,3 @@ copy DB credentials in .env with docker-compose.yml
         Enumerables (ValueObjects)
         Repositories
         Services
-
-### Optional
-
-Request: validation, data manipulation.
-
-Transformer: translation, formatting data.
-
-Repository: raw query
