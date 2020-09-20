@@ -1,4 +1,4 @@
-<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/luc0/laravel-base">
+[<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/luc0/laravel-base">](https://github.com/luc0/laravel-base/releases/tag/v1.0.0)
 
 # Laravel Base
 
