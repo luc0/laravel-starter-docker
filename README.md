@@ -1,3 +1,5 @@
+<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/luc0/laravel-base">
+
 # Laravel Base
 
 | Laravel | PHP | Postgres |
