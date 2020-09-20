@@ -1,8 +1,8 @@
 # Laravel Base
 
-| Laravel | PHP | Postgres |
+| Laravel | PHP | Mysql |
 | ------------- | ------------- |  ------------- |
- ^6.2 | 7.4 | 11.6 |
+ ^8.0 | 7.4 | :white_check_mark: |
 
 Scalable structure:
 - Repositories
