@@ -25,18 +25,18 @@ copy DB credentials in .env with docker-compose.yml
 ### Structure
 
     app
-    	Console
-    	Contracts/Payloads (contracts & traits)
+        Console
+        Contracts/Payloads (contracts & traits)
     	    Traits 
-    	Exceptions
-    	Transformers :man_shrugging:
+        Exceptions
+        Transformers :man_shrugging:
         Http
             Controllers (:writing_hand:	maybe can use handlers)
             Middleware
             Requests
             Util (helpers)
             ViewComposers/Presenters
-	Support (for external services)
+        Support (for external services)
 
     src (business logic)
         Models
