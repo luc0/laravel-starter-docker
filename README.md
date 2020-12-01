@@ -26,10 +26,10 @@ copy DB credentials in .env with docker-compose.yml
 
     app
     	Console
-	Contracts/Payloads (contracts & traits)
-	    Traits 
-	Exceptions
-	Transformers :man_shrugging:
+    	Contracts/Payloads (contracts & traits)
+    	    Traits 
+    	Exceptions
+    	Transformers :man_shrugging:
         Http
             Controllers (:writing_hand:	maybe can use handlers)
             Middleware
@@ -43,4 +43,4 @@ copy DB credentials in .env with docker-compose.yml
         Enumerables (ValueObjects)
         Repositories :man_shrugging:
         Services
-	Traits
+        Traits
